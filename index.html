@@ -1380,7 +1380,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Glowing Copyright Bar</title>
+    <title>Fixed Bottom Glowing Copyright Bar</title>
     <style>
         body {
             margin: 0;
@@ -1389,6 +1389,8 @@
             flex-direction: column;
             font-family: 'Segoe UI', Arial, sans-serif;
             background: #1a1a1a;
+            position: relative;
+            padding-bottom: 70px; /* Space for the copyright bar */
         }
 
         .content {
@@ -1397,18 +1399,18 @@
 
         .copyright-bar {
             position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            bottom: 0;
+            left: 0;
+            width: 100%;
             background: rgba(60, 60, 60, 0.95);
             color: #ffffff;
             text-align: center;
-            padding: 15px 30px;
-            border-radius: 50px;
-            box-shadow: 0 0 20px rgba(200, 200, 200, 0.2),
+            padding: 15px 0;
+            box-shadow: 0 -2px 20px rgba(200, 200, 200, 0.2),
                         inset 0 0 15px rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(5px);
             animation: glow 2s infinite alternate;
+            z-index: 1000;
         }
 
         .copyright-bar p {
@@ -1421,11 +1423,11 @@
 
         @keyframes glow {
             from {
-                box-shadow: 0 0 20px rgba(200, 200, 200, 0.2),
+                box-shadow: 0 -2px 20px rgba(200, 200, 200, 0.2),
                            inset 0 0 15px rgba(255, 255, 255, 0.1);
             }
             to {
-                box-shadow: 0 0 25px rgba(200, 200, 200, 0.3),
+                box-shadow: 0 -2px 25px rgba(200, 200, 200, 0.3),
                            inset 0 0 20px rgba(255, 255, 255, 0.2);
             }
         }
@@ -1440,6 +1442,10 @@
     <div class="content">
         <h1 style="color: white;">Main Content</h1>
         <p style="color: white;">Your website content goes here...</p>
+        <!-- Add more content to test scrolling -->
+        <div style="height: 200vh; color: white;">
+            Scroll content here...
+        </div>
     </div>
     
     <footer class="copyright-bar">
