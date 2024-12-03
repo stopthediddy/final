@@ -402,116 +402,143 @@
             <!--
         - #RESUME
       -->
+<article class="timeline" data-page="timeline">
+    <header>
+        <h2 class="h2 article-title">Mass Incarceration Timeline</h2>
+    </header>
 
-            <!--resume link: https://drive.google.com/file/d/1K-IvbjMNppW9rUNB3pPkLlEKxnCrZTeC/view?usp=sharing-->
+    <section class="timeline">
+        <div class="title-wrapper">
+            <div class="icon-box">
+                <ion-icon name="time-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Historical Timeline of Mass Incarceration</h3>
+        </div>
 
-            <article class="timeline" data-page="timeline">
+        <ol class="timeline-list">
+            <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">War on Drugs Begins</h4>
+                <span>1971</span>
+                <p class="timeline-text">
+                    President Nixon declares drug abuse "public enemy number one"
+                    <br>
+                    Federal drug control agencies established
+                </p>
+            </li>
 
-                <header>
-                    <h2 class="h2 article-title">Timeline</h2>
-                    <a class="resume-link-btn"
-                        href=""
-                        target="_blank">----</a>
-                </header>
+            <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Mandatory Minimum Sentences</h4>
+                <span>1984 — 1986</span>
+                <p class="timeline-text">
+                    Comprehensive Crime Control Act
+                    <br>
+                    Anti-Drug Abuse Act establishes mandatory minimums
+                </p>
+            </li>
 
-                <section class="timeline">
+            <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Three Strikes Law</h4>
+                <span>1994</span>
+                <p class="timeline-text">
+                    Violent Crime Control and Law Enforcement Act
+                    <br>
+                    Mandatory life sentences for third violent felony
+                </p>
+            </li>
 
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
+            <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Peak Incarceration Rate</h4>
+                <span>2008</span>
+                <p class="timeline-text">
+                    US reaches highest incarceration rate globally
+                    <br>
+                    2.3 million people imprisoned
+                </p>
+            </li>
 
-                        <h3 class="h3">Education</h3>
-                    </div>
+            <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">Fair Sentencing Act</h4>
+                <span>2010</span>
+                <p class="timeline-text">
+                    Reduced crack/powder cocaine sentencing disparity
+                    <br>
+                    Eliminated mandatory minimum for simple possession
+                </p>
+            </li>
 
-                    <ol class="timeline-list">
+            <li class="timeline-item">
+                <h4 class="h4 timeline-item-title">First Step Act</h4>
+                <span>2018</span>
+                <p class="timeline-text">
+                    Criminal justice reform bill signed
+                    <br>
+                    Expanded early release programs
+                </p>
+            </li>
+        </ol>
+    </section>
+</article>
 
-                        <li class="timeline-item">
+<style>
+.timeline-item {
+    position: relative;
+    padding-left: 45px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+    animation-delay: calc(var(--i) * 0.2s);
+}
 
-                            <h4 class="h4 timeline-item-title">Graphic Era University, Dehradun</h4>
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 5px;
+    left: 0;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #666;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    animation: glowPulse 2s infinite;
+}
 
-                            <span>Expected date: August 2024</span>
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 22px;
+    left: 7px;
+    width: 2px;
+    height: calc(100% + 10px);
+    background: linear-gradient(to bottom, #666, transparent);
+}
 
-                            <p class="timeline-text">
-                                Bachelor of Technology - Computer Science & Engineering
-                                <br>
-                                Grade: 9.18/10 GPA
-                                </br>
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
-                            </p>
+@keyframes glowPulse {
+    0% { box-shadow: 0 0 10px rgba(255,255,255,0.3); }
+    50% { box-shadow: 0 0 20px rgba(255,255,255,0.5); }
+    100% { box-shadow: 0 0 10px rgba(255,255,255,0.3); }
+}
 
-                        </li>
+.timeline-item:hover {
+    transform: translateX(10px);
+    transition: transform 0.3s ease;
+}
 
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">New Tehri International School, Tehri</h4>
-
-                            <span>2018 — 2020</span>
-
-                            <p class="timeline-text">
-                                CBSE (12th), PCM
-                                <br>
-                                Grade: 96.2%
-                                </br>
-                            </p>
-
-                        </li>
-
-                    </ol>
-
-                </section>
-
-                <section class="timeline">
-
-                    <div class="title-wrapper">
-                        <div class="icon-box">
-                            <ion-icon name="book-outline"></ion-icon>
-                        </div>
-
-                        <h3 class="h3">Certifications and Achievements</h3>
-                    </div>
-
-                    <ol class="timeline-list">
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Coding Ninjas Weekend Contest 114</h4>
-                            <span>achieved Rank 47 among 19K participants.</span>
-                            <span>Feb 2024</span>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Newton School CodeRush October Challenge</h4>
-                            <span>achieved an overall Rank of 108 and a college Rank of 3 among 31K participants.</span>
-                            <span>Oct 2023</span>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">LeetCode</h4>
-                            <span>solved over 700 LeetCode problems focusing on Data Structures and Algorithms
-                                (DSA).</span>
-                            <span>Mar 2024</span>
-                        </li>
-
-                        <li class="timeline-item">
-                            <h4 class="h4 timeline-item-title">Striver's SDE Sheet Challenge</h4>
-                            <span>One of the winners, and received goodies from Coding Ninjas.</span>
-                            <span>Aug 2023</span>
-                        </li>
-
-                        <li class="timeline-item">
-
-                            <h4 class="h4 timeline-item-title">Tech Vivad Finalist</h4>
-                            <span>an Asian Parliamentary inter-university Debate organized by Bennett University</span>
-                            <span>Feb 2021</span>
-
-                            <p class="timeline-text">
-                                Skills: Presentation, Rhetoric, Teamwork
-                            </p>
-                        </li>
-
-                    </ol>
-
-                </section>
+.timeline-text {
+    line-height: 1.6;
+    margin-top: 8px;
+    padding: 10px;
+    border-left: 2px solid #666;
+    background: rgba(255,255,255,0.05);
+    border-radius: 0 4px 4px 0;
+}
+</style>
 
                 <section class="skill">
 
